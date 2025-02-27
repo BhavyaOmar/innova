@@ -2,22 +2,20 @@ import React from "react";
 import NavbarWelcome from "../Components/NavbarWelcome";
 import Button from "../Components/Button";
 import Info from "../Components/Info";
-import Footer from "../Components/Footer";
-import BarChart from "../Components/PieChart";
-import { Routes, Route } from "react-router-dom";
 
 const Welcome = () => {
   return (
     <>
       <NavbarWelcome />
-      <div className="my-24">
+      <div>
         <div className="hero">
-          <h1>Compare, Invest, Grow !</h1>
-          <p>An innovation in finance.</p>
-          <Button text="Get Started" />
+          <h1 style={{ fontSize: "5vw" }}>Compare, Invest, Grow !</h1>
+          <p style={{ fontSize: "3vw", color: "grey" }}>
+            An innovation in finance. &nbsp;&nbsp;
+          </p>
+          <Button text="Get Started" style={{ padding: "5px 20px" }} />
         </div>
         <Info />
-        <Footer />
       </div>
     </>
   );

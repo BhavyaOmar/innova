@@ -1,10 +1,11 @@
 import React from "react";
+import Card from "./Card";
 
 const Info = () => {
   return (
     <>
       <div style={{ backgroundColor: "white" }}>
-        <div style={{ margin: "10px" }}>
+        <div style={{ padding: "10px 0" }}>
           <h1
             style={{
               fontSize: "4rem",
@@ -15,13 +16,31 @@ const Info = () => {
           >
             What we Offer !
           </h1>
-          <ul style={{ fontSize: "20px", color: "black" }}>
-            <div>
-              <Card text="Know Before You Grow" />
-              <li>Tailored Investment Plans</li>
-              <li>Maximize Your Profit</li>
-            </div>
-          </ul>
+          <div
+            style={{
+              fontSize: "20px",
+              color: "black",
+              display: "flex",
+              justifyContent: "space-around",
+              margin: "10px 5px",
+            }}
+          >
+            <Card
+              title="Know Before You Grow"
+              detail="Stay ahead with data-driven insights before you invest."
+              style={{ border: "1px solid black" }}
+            />
+            <Card
+              title="Tailored Investment Plans"
+              detail="Get the best strategy customized for you."
+              style={{ border: "1px solid black" }}
+            />
+            <Card
+              title="Maximize Your Profit"
+              detail="Smarter choices, bigger returns!"
+              style={{ border: "1px solid black" }}
+            />
+          </div>
         </div>
       </div>
       <div style={{}}>
@@ -34,11 +53,31 @@ const Info = () => {
           >
             Why Us?
           </h1>
-          <ul style={{ fontSize: "20px" }}>
-            <li>Beginner-Friendly Investing</li>
-            <li>Real Time Precision</li>
-            <li>Effortless Experience</li>
-          </ul>
+          <div
+            style={{
+              fontSize: "20px",
+              color: "black",
+              display: "flex",
+              justifyContent: "space-around",
+              margin: "10px 5px",
+            }}
+          >
+            <Card
+              title="Beginner-Friendly Investing"
+              detail="No experience? No problem! We do the math, so you can invest with confidence."
+              style={{ border: "1px solid white", color: "white" }}
+            />
+            <Card
+              title="Real Time Precision"
+              detail="We deliver the best accuracy using live data, ensuring up-to-the-minute results."
+              style={{ border: "1px solid white", color: "white" }}
+            />
+            <Card
+              title="Effortless Experience"
+              detail="Designed for ultimate ease, so you get what you need—fast and hassle-free!"
+              style={{ border: "1px solid white", color: "white" }}
+            />
+          </div>
         </div>
       </div>
     </>
