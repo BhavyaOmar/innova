@@ -7,10 +7,10 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="w-full px-4 bg2 fixed bottom-0">
+    <div className="w-full px-4 bg2">
       <div className="my-6">
         <div>
-          <a href="/"><h1 className="text-2xl my-4">NegiGrow</h1></a>
+          <a href="/"><h1 className="text-2xl my-4">Finnova</h1></a>
         </div>
 
         <div className="socials my-2">
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <p>&copy; NegiGrow 2025 | All Rights Reserved</p>
+        <p>&copy; Finnova 2025 | All Rights Reserved</p>
       </div>
     </div>
   );

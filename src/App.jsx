@@ -7,7 +7,6 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <div>
-      <NavbarWelcome />
       <Navbar />
 
       <div className="my-32">
