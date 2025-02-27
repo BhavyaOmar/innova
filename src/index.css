@@ -38,6 +38,20 @@
     background-color: #a8b2d134;
 }
 
+/* Modal */
+
+.modal{
+    background-color: var(--bg-color);
+}
+
+.listItem{
+    cursor: pointer;
+}
+
+.listItem:hover{
+    background-color: var(--border-color);
+}
+
 /* Footer */
 
 .socials a:hover{
