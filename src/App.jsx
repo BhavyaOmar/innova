@@ -3,19 +3,21 @@ import Welcome from "./Pages/Welcome";
 import NavbarWelcome from "./Components/NavbarWelcome";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import PieChart from "./Components/PieChart";
 
 const App = () => {
   return (
-    <div>
-      <NavbarWelcome />
-      <Navbar />
+    // <div>
+    //   <Navbar />
 
-      <div className="my-32">
-        <h1 className="mx-8 text-3xl">Home Page</h1>
-      </div>
+    //   <div className="my-32">
+    //     <h1 className="mx-8 text-3xl">Home Page</h1>
+    //   </div>
 
-      <Footer />
-    </div>
+    //   <Footer />
+    // </div>
+
+    <Welcome />
   );
 };
 
