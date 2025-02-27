@@ -4,12 +4,13 @@ import Button from "../Components/Button";
 import Info from "../Components/Info";
 import Footer from "../Components/Footer";
 import BarChart from "../Components/PieChart";
+import { Routes, Route } from "react-router-dom";
 
 const Welcome = () => {
   return (
     <>
       <NavbarWelcome />
-      <div>
+      <div className="my-24">
         <div className="hero">
           <h1>Compare, Invest, Grow !</h1>
           <p>An innovation in finance.</p>
@@ -17,7 +18,6 @@ const Welcome = () => {
         </div>
         <Info />
         <Footer />
-        <BarChart />
       </div>
     </>
   );

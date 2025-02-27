@@ -1,10 +1,11 @@
 import React from "react";
-import names from "../jsonData/scheme_names.json";
+// import names from "../jsonData/scheme_names.json";
 
-const Card = ({}) => {
+const Card = ({ title, detail, style }) => {
   return (
-    <div>
-      <h1>Card</h1>
+    <div style={{ style, height: "100px", width: "50px" }}>
+      <h1>{title}</h1>
+      <p>{detail}</p>
     </div>
   );
 };

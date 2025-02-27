@@ -1,28 +1,19 @@
 import React, { Children } from "react";
 import Welcome from "./Pages/Welcome";
-import NavbarWelcome from "./Components/NavbarWelcome";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import PieChart from "./Components/PieChart";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Discover from "./Pages/Discover";
+import Dashboard from "./Pages/Dashboard";
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    // <div>
-    //   <Navbar />
-=======
-    <div>
-      <Navbar />
->>>>>>> f6d1ff3a859039fb7a61e233dfde1681a908709f
-
-    //   <div className="my-32">
-    //     <h1 className="mx-8 text-3xl">Home Page</h1>
-    //   </div>
-
-    //   <Footer />
-    // </div>
-
-    <Welcome />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<h1>❌ 404 - Page Not Found</h1>} />
+      </Routes>
+    </Router>
   );
 };
 
