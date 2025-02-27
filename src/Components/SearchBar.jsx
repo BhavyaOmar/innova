@@ -21,13 +21,15 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className="searchBar">
+      <div className="w-full">
         <input
           type="text"
-          value={query}
           placeholder="Search"
+          value={query}
+          className="searchBar border w-full px-2 py-0.5 rounded-lg"
           onChange={updateInput}
         />
+
         <ul>
           {filteredNames.map((name, index) => (
             <li key={index} onClick={() => setQuery(name)}>
