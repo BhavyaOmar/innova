@@ -7,22 +7,17 @@ import PieChart from "./Components/PieChart";
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    // <div>
-    //   <Navbar />
-=======
     <div>
       <Navbar />
->>>>>>> f6d1ff3a859039fb7a61e233dfde1681a908709f
 
-    //   <div className="my-32">
-    //     <h1 className="mx-8 text-3xl">Home Page</h1>
-    //   </div>
+      <div className="my-32 h-[40vh]">
+        <h1 className="mx-8 text-3xl">Home Page</h1>
+      </div>
 
-    //   <Footer />
-    // </div>
+      <Footer />
+    </div>
 
-    <Welcome />
+    // <Welcome >
   );
 };
 
