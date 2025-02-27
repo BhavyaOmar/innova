@@ -29,6 +29,7 @@ const Info = () => {
               title="Know Before You Grow"
               detail="Stay ahead with data-driven insights before you invest."
               style={{ border: "1px solid black" }}
+              dataAos="fade-right"
             />
             <Card
               title="Tailored Investment Plans"

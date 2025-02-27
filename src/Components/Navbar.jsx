@@ -14,9 +14,6 @@ const Navbar = () => {
 
       <div>
         <ul className="flex gap-10">
-          <Link to="/dashboard" className="navLink">
-            <li>Dashboard</li>
-          </Link>
           <Link to="/discover" className="navLink">
             <li>Discover</li>
           </Link>
