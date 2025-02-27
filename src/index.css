@@ -52,6 +52,44 @@
     background-color: var(--border-color);
 }
 
+/* Card - Dashboard */
+
+.card{
+    padding: 2%;
+    padding-left: 2.8%;
+    padding-right: 2.8%;
+    border-radius: 5%;
+    border: 1px solid var(--text-muted);
+    background-color: var(--bg-color);
+}
+
+.title{
+    font-size: 1em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.data{
+    font-size: 1.5em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.message{
+    font-size: 0.6em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.display{
+    width: 50%;
+}
+
+.news{
+    background: var(--bg-color);
+    width: 30%;
+}
+
 /* Footer */
 
 .socials a:hover{
