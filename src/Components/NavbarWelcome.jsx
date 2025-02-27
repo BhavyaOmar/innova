@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 function NavbarWelcome() {
   return (
-    <div className="navbar flex w-full justify-between items-center px-10 py-2 fixed top-0 left-0">
+    <div className="navbar flex w-full justify-between items-center px-10 py-2 fixed top-0 left-0 z-[1001]">
       <div className="justify-center">
         <NavLink to="/">
           <h1 className="text-xl">Finnova</h1>
@@ -14,8 +14,8 @@ function NavbarWelcome() {
 
       <div>
         <ul className="flex gap-10">
-          <Link to="/" className="navLink">
-            <li>Explore</li>
+          <Link to="/dashboard" className="navLink">
+            <li>Dashboard</li>
           </Link>
           <a href="/discover" className="navLink">
             <li>Discover</li>

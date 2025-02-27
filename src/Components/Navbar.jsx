@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex w-full justify-between items-center px-10 py-2 fixed top-0 left-0">
+    <div className="navbar flex w-full justify-between items-center px-10 py-2 fixed top-0 left-0 z-[1001]">
       <div className="justify-center">
         <Link to="/" className="logo">
           <h1 className="text-xl">NegiGrow</h1>

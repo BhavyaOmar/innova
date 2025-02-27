@@ -26,7 +26,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--card-bg);
+  /* background-color: var(--card-bg); */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://img.freepik.com/free-vector/gradient-connection-background_23-2150462050.jpg?t=st=1740692823~exp=1740696423~hmac=07781f9c18c25668e2eac7d282915d24ba374202cfc34d2bc12c1c9f42fac519&w=1380") no-repeat center center/cover;
   color: var(--text-primary);
 }
 
