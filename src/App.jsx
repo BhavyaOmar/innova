@@ -3,7 +3,6 @@ import Welcome from "./Pages/Welcome";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Discover from "./Pages/Discover";
 import Dashboard from "./Pages/Dashboard";
-import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 const App = () => {
@@ -16,7 +15,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<h1>❌ 404 - Page Not Found</h1>} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };
