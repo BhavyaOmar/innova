@@ -4,8 +4,8 @@ import "../App.css"
 const SearchBar = () => {
   return (
     <>
-      <div className="searchBar">
-        <input type="text" placeholder="Search"/>
+      <div className="w-full">
+        <input type="text" placeholder="Search" className="searchBar border w-full px-2 py-0.5 rounded-lg"/>
       </div>
     </>
   );
