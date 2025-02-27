@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card"
 
 const Info = () => {
   return (
@@ -15,9 +16,13 @@ const Info = () => {
           >
             What we Offer !
           </h1>
-          <p style={{ fontSize: "20px", color: "black" }}>
-            Some sample text here
-          </p>
+          <ul style={{ fontSize: "20px", color: "black" }}>
+            <div>
+              <Card text="Know Before You Grow" />
+              <li>Tailored Investment Plans</li>
+              <li>Maximize Your Profit</li>
+            </div>
+          </ul>
         </div>
       </div>
       <div style={{}}>
@@ -26,12 +31,15 @@ const Info = () => {
             style={{
               fontSize: "4rem",
               textAlign: "center",
-              borderTop: "1px solid white",
             }}
           >
             Why Us?
           </h1>
-          <p style={{ fontSize: "20px" }}>Some sample text here</p>
+          <ul style={{ fontSize: "20px" }}>
+            <li>Beginner-Friendly Investing</li>
+            <li>Real Time Precision</li>
+            <li>Effortless Experience</li>
+          </ul>
         </div>
       </div>
     </>

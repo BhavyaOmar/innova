@@ -1,23 +1,23 @@
 import React, { Children } from "react";
 import Welcome from "./Pages/Welcome";
-import NavbarWelcome from "./Components/NavbarWelcome";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Discover from "./Pages/Discover";
+import Dashboard from "./Pages/Dashboard";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import PieChart from "./Components/PieChart";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-
-      <div className="my-32 h-[40vh]">
-        <h1 className="mx-8 text-3xl">Home Page</h1>
-      </div>
-
-      <Footer />
-    </div>
-
-    // <Welcome >
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<h1>❌ 404 - Page Not Found</h1>} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 };
 

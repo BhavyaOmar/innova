@@ -10,7 +10,9 @@ const Footer = () => {
     <div className="w-full px-4 bg2">
       <div className="my-6">
         <div>
-          <a href="/"><h1 className="text-2xl my-4">Finnova</h1></a>
+          <a href="/">
+            <h1 className="text-2xl my-4">Finnova</h1>
+          </a>
         </div>
 
         <div className="socials my-2">
