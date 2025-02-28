@@ -10,18 +10,12 @@ import {
   LineChart,
   Line,
   CartesianGrid,
-  PieChart,
-  Pie,
-  Cell,
-  Legend,
   RadarChart,
   Radar,
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
 } from "recharts";
-
-const COLORS = ["#8884d8", "#82ca9d", "#ffbb28", "#ff8042", "#ff4560"];
 
 const CompanyInfo = () => {
   const { amc } = useParams();
@@ -72,7 +66,7 @@ const CompanyInfo = () => {
               <XAxis dataKey="scheme_name" tick={{ fontSize: 10 }} />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="fund_size" fill="#8884d8" name="Fund Size (₹Cr)" />
+              <Bar dataKey="fund_size" fill="#0077b6" name="Fund Size (₹Cr)" />
             </BarChart>
           </ResponsiveContainer>
 
@@ -88,19 +82,19 @@ const CompanyInfo = () => {
               <Line
                 type="monotone"
                 dataKey="returns.1_year"
-                stroke="#8884d8"
+                stroke="#00a8e8"
                 name="1-Year Return"
               />
               <Line
                 type="monotone"
                 dataKey="returns.3_years"
-                stroke="#82ca9d"
+                stroke="#00ff00"
                 name="3-Year Return"
               />
               <Line
                 type="monotone"
                 dataKey="returns.5_years"
-                stroke="#ff4560"
+                stroke="#ff3131"
                 name="5-Year Return"
               />
             </LineChart>
@@ -114,11 +108,10 @@ const CompanyInfo = () => {
               <XAxis dataKey="scheme_name" tick={{ fontSize: 10 }} />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="fund_age" fill="#8884d8" name="Fund Age (Years)" />
+              <Bar dataKey="fund_age" fill="#2ecc71" name="Fund Age (Years)" />
             </BarChart>
           </ResponsiveContainer>
 
-          {/* 📡 Radar Chart - Risk Level */}
           <h2 className="text-xl font-semibold my-4 text-center">
             Risk Level Comparison
           </h2>
@@ -126,14 +119,16 @@ const CompanyInfo = () => {
             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={schemes}>
               <PolarGrid />
               <PolarAngleAxis dataKey="scheme_name" tick={{ fontSize: 10 }} />
-              <PolarRadiusAxis />
+              <PolarRadiusAxis domain={[0, 6]} tickCount={7} />
+
               <Radar
                 name="Risk Level"
                 dataKey="risk_level"
-                stroke="#8884d8"
-                fill="#8884d8"
+                stroke="#ffbb28"
+                fill="#ffbb28"
                 fillOpacity={0.6}
               />
+
               <Tooltip />
             </RadarChart>
           </ResponsiveContainer>

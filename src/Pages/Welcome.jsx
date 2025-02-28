@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarWelcome from "../Components/NavbarWelcome";
+import { Link } from "react-router-dom";
 import Button from "../Components/Button";
 import Info from "../Components/Info";
 
@@ -12,7 +12,9 @@ const Welcome = () => {
           <p style={{ fontSize: "3vw", color: "grey" }}>
             An innovation in finance. &nbsp;&nbsp;
           </p>
-          <Button text="Get Started" style={{ padding: "5px 20px" }} />
+          <Link to="/dashboard">
+            <Button text="Go to Dashboard" style={{ padding: "5px 20px" }} />
+          </Link>
         </div>
         <Info />
       </div>
