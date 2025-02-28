@@ -1,8 +1,34 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import axios from "axios";
 
 const Dashboard = () => {
-  const [value, setValue] = useState(50);
+
+  const [logs, setLogs] = useState([]);
+  const logRef = useRef(null);
+  const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const response = await axios.get("http://127.0.0.1:5000/news");
+                setNews(response.data);
+            } catch (error) {
+                console.error("Error fetching news:", error);
+            }
+        };
+
+        fetchNews();
+        const interval = setInterval(fetchNews, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+      if (logRef.current) {
+        logRef.current.scrollTop = logRef.current.scrollHeight;
+      }
+    }, [logs]);
 
   return (
     <div className="h-fit mt-24 mx-8">
@@ -83,8 +109,15 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-2xl p-4 news">
+        <div className="flex flex-col rounded-2xl p-4 news overflow-y-scroll">
           <h1>Live Stocks News</h1>
+          {news.map((article, index) => (
+                <div key={index} style={{  padding: "10px", margin: "10px" }}>
+                    <h3>• {article.headline}</h3>
+                    <p>{article.summary}</p>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
+                </div>
+            ))}
         </div>
       </div>
     </div>
