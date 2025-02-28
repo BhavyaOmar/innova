@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function NavbarWelcome() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,17 +27,22 @@ function NavbarWelcome() {
     >
       <div className="justify-center">
         <NavLink to="/">
-          <h1 className="text-xl">Finnova</h1>
+          <h1 className="text-[30px] font-bold ">Finnova</h1>
         </NavLink>
       </div>
-      <div className="w-[30%]">
+      <div>
+        <ul className="flex items-center gap-4 md:gap-10">
+          <Link to="/dashboard" className="navLink text-base md:text-lg">
+            <li>Dashboard</li>
+          </Link>
+        </ul>
+      </div>
+
+      <div className="w-[50vw] max-w-[500px] hidden sm:block">
         <SearchBar />
       </div>
 
-      <div className="flex gap-8">
-        <Button text="SignUp" />
-        <Button text="Login" />
-      </div>
+      <div className="flex gap-8"></div>
     </div>
   );
 }
