@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
-<<<<<<< HEAD
-=======
     "aos": "^2.3.4",
->>>>>>> upstream/main
     "axios": "^1.8.1",
     "chart.js": "^4.4.8",
     "react": "^19.0.0",
