@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { FinanceContext } from "../Contexts/FInanceProvider";
 import "../App.css";
 import names from "../jsonData/amc_names.json";
-import NavbarWelcome from "./NavbarWelcome";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -46,6 +45,7 @@ const SearchBar = () => {
     setQuery(amc);
     setFilteredNames([]);
     navigate(`/amc/${encodeURIComponent(amc)}`);
+    setQuery("");
   };
 
   return (

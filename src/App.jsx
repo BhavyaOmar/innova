@@ -5,14 +5,12 @@ import Dashboard from "./Pages/Dashboard";
 import Footer from "./Components/Footer";
 import Error404 from "./Pages/Error404";
 import CompanyInfo from "./Pages/CompanyInfo";
-import { FinanceProvider } from "./Contexts/FInanceProvider"; // Corrected import
+import { FinanceProvider } from "./Contexts/FInanceProvider";
 import NavbarWelcome from "./Components/NavbarWelcome";
 
 const App = () => {
   return (
     <FinanceProvider>
-      {" "}
-      {/* Corrected component name */}
       <Router>
         <NavbarWelcome />
         <Routes>

@@ -27,35 +27,13 @@ function NavbarWelcome() {
         </NavLink>
       </div>
 
-      <div>
-        <ul className="flex items-center gap-4 md:gap-10">
-          <Link to="/dashboard" className="navLink text-base md:text-lg">
-            <li>Dashboard</li>
-          </Link>
-        </ul>
-      </div>
-
       <div className="w-[50vw] max-w-[500px] hidden sm:block">
+        <div className="">
+          <SearchBar />
+        </div>
 
-
-      <div>
-        <ul className="flex gap-10">
-          <Link to="/dashboard" className="navLink">
-            <li>Dashboard</li>
-          </Link>
-          <a href="/discover" className="navLink">
-            <li>Discover</li>
-          </a>
-        </ul>
+        <div className="flex gap-8"></div>
       </div>
-
-      <div className="w-[30%]">
-
-        <SearchBar />
-      </div>
-
-      <div className="flex gap-8"></div>
-    </div>
     </div>
   );
 }
