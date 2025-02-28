@@ -6,7 +6,6 @@ import Info from "../Components/Info";
 const Welcome = () => {
   return (
     <>
-      <NavbarWelcome />
       <div>
         <div className="hero">
           <h1 style={{ fontSize: "5vw" }}>Compare, Invest, Grow !</h1>

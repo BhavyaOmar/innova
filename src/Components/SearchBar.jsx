@@ -1,30 +1,32 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { FinanceContext } from "../Contexts/FInanceProvider";
 import "../App.css";
 import names from "../jsonData/amc_names.json";
+import NavbarWelcome from "./NavbarWelcome";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [filteredNames, setFilteredNames] = useState([]);
+  const { setName } = useContext(FinanceContext);
   const modalRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        // setQuery("");
         setFilteredNames([]);
       }
     };
 
-    if (query) {
+    if (filteredNames.length > 0) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [query]);
+  }, [filteredNames]);
 
   const updateInput = (e) => {
     const input = e.target.value;
@@ -39,8 +41,16 @@ const SearchBar = () => {
     }
   };
 
+  const handleSelectAMC = (amc) => {
+    setName(amc);
+    setQuery(amc);
+    setFilteredNames([]);
+    navigate(`/amc/${encodeURIComponent(amc)}`);
+  };
+
   return (
     <>
+      {/* <NavbarWelcome /> */}
       <div className="w-full relative">
         <input
           type="text"
@@ -49,17 +59,24 @@ const SearchBar = () => {
           className="searchBar border w-full px-2 py-0.5 rounded-lg"
           onChange={updateInput}
         />
-      </div>
 
-        {query.trim() && (
-        <ul ref={modalRef} className="absolute w-[29%] h-fit max-h-[500%] rounded-b-xl modal overflow-y-scroll">
-          {filteredNames.map((name, index) => (
-            <li key={index} onClick={() => setQuery(name)} className="listItem px-4 my-1">
-              {name}
-            </li>
-          ))}
-        </ul>
+        {filteredNames.length > 0 && (
+          <ul
+            ref={modalRef}
+            className="absolute w-[150%] h-fit max-h-[600%] rounded-b-xl modal overflow-y-auto bg-white shadow-lg"
+          >
+            {filteredNames.map((name, index) => (
+              <li
+                key={index}
+                onClick={() => handleSelectAMC(name)}
+                className="listItem px-4 my-1 cursor-pointer hover:bg-gray-200"
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
         )}
+      </div>
     </>
   );
 };
