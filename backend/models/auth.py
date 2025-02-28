@@ -7,15 +7,15 @@ import os
 load_dotenv('../.env.local')
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/Investmentdb"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/investmentdb"
 mongo = PyMongo(app)
 
 
 class User:
     @staticmethod
     def create_user(name, email, password):
-        hashed_password = generate_password_hash(password)
-        user_data = {"name":name, "email": email, "password": hashed_password}
+        hashed_password = generate_password_hash(password)  # Hash the password
+        user_data = {"name": name, "email": email, "password": hashed_password}
         mongo.db.userdb.insert_one(user_data)
         return user_data
 
